@@ -10,7 +10,7 @@ spec:
     spec:
       containers:
         - name: upgrade-sql-schema
-          image: alpine:latest
+          image: registry.cn-hangzhou.aliyuncs.com/bay1/alpine:latest
           command: ["sleep", "5"]
       restartPolicy: Never
 ---
@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
         - name: main
-          image: nginx:latest
+          image: registry.cn-hangzhou.aliyuncs.com/bay1/nginx:latest
 ---
 apiVersion: v1
 kind: Service
@@ -57,7 +57,7 @@ spec:
     spec:
       containers:
         - name: page-up
-          image: alpine:latest
+          image: registry.cn-hangzhou.aliyuncs.com/bay1/alpine:latest
           command: ["sleep", "2"]
       restartPolicy: Never
   backoffLimit: 0
@@ -80,7 +80,7 @@ spec:
     spec:
       containers:
         - name: main
-          image: nginx:latest
+          image: registry.cn-hangzhou.aliyuncs.com/bay1/nginx:latest
 ---
 apiVersion: v1
 kind: Service
@@ -109,6 +109,6 @@ spec:
     spec:
       containers:
         - name: page-down
-          image: alpine:latest
+          image: registry.cn-hangzhou.aliyuncs.com/bay1/alpine:latest
           command: ["sleep", "2"]
       restartPolicy: Never
